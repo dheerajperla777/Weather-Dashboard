@@ -81,9 +81,9 @@ async function getWeather(city) {
             "Updated: " + current.time.replace("T", " ") +
             " (local time at the selected location).";
 
-    } catch (error) {
-        status.textContent = error.message ||
-            "Something went wrong. Please try again.";
+ } catch (error) {
+    console.error("Weather API error:", error);
+    status.textContent = "Error: " + error.message;
     }
 }
 
