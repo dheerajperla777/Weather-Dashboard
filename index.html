@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="weather-box">
+        <h1>Weather Dashboard</h1>
+        <p>Find the current weather in your city</p>
+
+        <form id="weatherForm">
+            <input id="cityInput" type="text"
+                   placeholder="Enter city name" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="status" aria-live="polite"></p>
+
+        <section id="weather" hidden>
+            <h2 id="cityName"></h2>
+            <p id="condition"></p>
+            <p class="temperature"><span id="temperature"></span>°C</p>
+
+            <div class="details">
+                <div>
+                    <h3>Humidity</h3>
+                    <p><span id="humidity"></span>%</p>
+                </div>
+                <div>
+                    <h3>Wind Speed</h3>
+                    <p><span id="wind"></span> km/h</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
